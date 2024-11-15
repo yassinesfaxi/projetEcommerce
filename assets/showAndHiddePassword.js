@@ -17,7 +17,7 @@ if (pathName === "/login") {
     eyeOff.style.display = "none";
     inputPassword.type = "password";
   });
-  
+
 } else if (pathName === "/register" || pathName === "/reset-password/reset") {
   const eyeOn = document.querySelector('.eye-on');
   const eyeOff = document.querySelector('.eye-off');
@@ -28,7 +28,7 @@ if (pathName === "/login") {
 
   eyeOff.style.display = "none";
   eye.style.display = "flex";
-  noDisplay.style.display = "none"; 
+  noDisplay.style.display = "none";
 
   eyeOn.addEventListener('click', () => {
     eyeOn.style.display = "none";
@@ -36,7 +36,7 @@ if (pathName === "/login") {
     inputPassword.type = "text";
     displayEye.style.display = "none";
     noDisplay.style.display = "block";
-});
+  });
 
   eyeOff.addEventListener('click', () => {
     eyeOn.style.display = "block";
@@ -44,5 +44,5 @@ if (pathName === "/login") {
     inputPassword.type = "password";
     displayEye.style.display = "block";
     noDisplay.style.display = "none";
-});
+  });
 };

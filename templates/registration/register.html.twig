@@ -11,7 +11,15 @@
 
     <h1>S'enregistrer</h1>
 
+    {{ form_errors(registrationForm) }}
 
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.name)}}
+    {{ form_row(registrationForm.firstname)}}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'mot de passe'
+    }) }}
     <div class="eye">
         <span class="material-symbols-outlined eye-off">visibility_off</span>
         <span class="material-symbols-outlined eye-on">visibility</span>
@@ -21,7 +29,7 @@
     <br>
     {{ form_row(registrationForm.agreeTerms, {
         label: "Accepter les conditions d'utilisations de vos données personnelles"
-    }) }}
+    }) }} <a href="{{ path('app_rgpd')}}">Règlementation Générale de la Protection des Données</a>
     <br>
     <br>
     <button type="submit" class="btn btn-primary">S'enregistrer</button>

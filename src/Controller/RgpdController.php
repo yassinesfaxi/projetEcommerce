@@ -6,13 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class BuyController extends AbstractController
+class RgpdController extends AbstractController
 {
-    #[Route('/profile/buy', name: 'app_buy')]
+    #[Route('/rgpd', name: 'app_rgpd')]
     public function index(): Response
     {
-        return $this->render('buy/index.html.twig', [
-            'controller_name' => 'BuyController',
-        ]);
+        return $this->render('rgpd/index.html.twig');
     }
 }
